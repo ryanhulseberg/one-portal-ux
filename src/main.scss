@@ -1,0 +1,33 @@
+/*
+This project follows Inverted Triangle CSS (ITCSS) by
+Harry "CSS Wizardry" Roberts. Files should be organized
+by groups which are described in detail below. As we go
+down our list of files we should go from:
+
+  Generic to explicit
+  Far-reaching to localised
+  Low specificity to high specificity
+
+*/
+
+@charset "UTF-8";
+
+/*
+Settings store all variables, config switches, etc.
+Split up into logical sections, the smaller and simpler the better.
+*/
+@import "scss/settings/global"; // Import first
+
+// Required above group for dependencies
+@import "scss/settings/color";
+@import "scss/settings/typography";
+@import "scss/settings/grid";
+@import "scss/base/page";
+@import "scss/base/inputs";
+@import "scss/objects/layout";
+@import "scss/generics/normalize";
+@import "scss/components/box";
+@import "scss/components/header";
+@import "scss/objects/layout";
+@import "scss/components/sidebar";
+@import "scss/components/notifications";

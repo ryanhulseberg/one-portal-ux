@@ -1,0 +1,14 @@
+.sign-in {
+
+  &--box {
+    width: 350px;
+    margin: 0 auto 40px;
+    background-clip: padding-box;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.06);
+  }
+
+  &--box__content {
+    padding: 40px 40px 20px;
+  }
+}

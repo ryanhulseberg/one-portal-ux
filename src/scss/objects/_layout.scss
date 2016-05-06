@@ -1,0 +1,38 @@
+// breakpoints
+
+$mobile:     376px;
+$tablet:     768px;
+$desktop:     1170px;
+
+// Sign In
+.sign-in-container {
+  background: $crimson;
+  background-size: cover;
+  min-height: 600px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.center {
+  width: 410px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+// Main
+.row {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  margin-left: 5.3030303%;
+}

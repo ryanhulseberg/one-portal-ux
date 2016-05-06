@@ -1,0 +1,43 @@
+@import "susy";
+
+/* Changing Susy default global settings */
+$susy: (
+  columns: 12,
+  gutters: 20px / 96.666666667px,
+  output: float,
+  gutter-position: split,
+);
+
+/* Makes border-box properties */
+@include border-box-sizing;
+
+.wrapper {
+  @include container(1160px);
+}
+
+aside {
+  @include span(3 of 12);
+  padding-top: 1rem;
+}
+
+main {
+  @include span(9 of 12);
+  padding-top: 1rem;
+}
+
+.dynamic-content__bursar--nested {
+  @include span(6 of 12);
+
+  .dynamic-content__bursar--balance {
+    @include span(12 of 12);
+  }
+
+  .dynamic-content__bursar--holds {
+    @include span(12 of 12);
+    margin-top: 20px;
+  }
+}
+
+.dynamic-content__bursar--transactions {
+  @include span(6 of 12);
+}

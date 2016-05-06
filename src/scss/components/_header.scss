@@ -1,0 +1,187 @@
+
+// Global Navigation
+header {
+  position: fixed;
+  // height: 108px;
+  top: 0;
+  transition: top 0.3s ease;
+  width: 100%;
+  z-index: 1000;
+
+  &.nav-up {
+    top: -56px;
+  }
+}
+
+.header-scroll {
+  height: 1px;
+}
+
+// Primary Navigation
+@media (min-width: $tablet) {
+  .main-nav {
+    display: block;
+    width: 100%;
+    height: 3.5rem;
+    top: 0;
+    left: 0;
+    background: $primary;
+
+    img {
+      vertical-align: middle;
+      margin-bottom: 3px;
+    }
+
+    li {
+      line-height: 56px;
+
+      a {
+        padding: 18px;
+        color: $white;
+        text-decoration: none;
+        transition: .25s ease;
+        opacity: 0.85;
+
+        &:hover {
+          opacity: 0.65;
+        }
+
+        &.active {
+          opacity: 1;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__list {
+      list-style: none;
+      margin-bottom: 0;
+    }
+
+    &__item {
+      position: relative;
+      float: left;
+      margin-bottom: 0;
+      font-size: 14px;
+
+      &--box {
+        background: $crimson;
+      }
+    }
+  }
+
+  // Secondary Navigation
+  .secondary-nav {
+    display: block;
+    background: $white;
+    width: 100%;
+    height: 3.25rem;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid $gray-2;
+    text-align: center;
+
+    li {
+      line-height: 3.25rem;
+
+      a {
+        padding: 14px 18px;
+        color: rgba($base, 0.85);
+        text-decoration: none;
+        transition: .25s ease;
+
+        &:hover {
+          opacity: 0.65;
+        }
+
+        &.active {
+          opacity: 1;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &.is-fixed {
+      position: fixed;
+    }
+
+    &__list {
+      list-style: none;
+      margin-bottom: 0;
+    }
+
+    &__item {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+  }
+
+  .mobile-main-nav {
+    display: none;
+  }
+}
+
+// Mobile Navigation
+@media (max-width: $tablet) {
+  .mobile-main-nav {
+    display: block;
+    background: $primary;
+    height: 50px;
+
+    &__trigger {
+      position: absolute;
+    	left: 0;
+    	top: 0;
+    	height: 100%;
+    	width: 50px;
+    	background-color: $crimson;
+    }
+
+    &__icon {
+      /* this span is the central line in the menu menu */
+  		display: inline-block;
+  		position: absolute;
+      left: 30%;
+      top: 50%;
+      bottom: auto;
+      right: auto;
+  		width: 18px;
+  		height: 2px;
+  		background-color: #FFF;
+
+  		/* these are the upper and lower lines in the menu menu */
+  		&::before, &:after {
+  			content: '';
+  			width: 100%;
+  			height: 100%;
+  			position: absolute;
+  			background-color: inherit;
+  			left: 0;
+  		}
+
+  		&::before {
+  			bottom: 5px;
+  		}
+
+  		&::after {
+  			top: 5px;
+  		}
+    }
+
+    &__page-title {
+      display: inline-block;
+      position: absolute;
+      color: $white;
+      font-size: 14px;
+      left: 50px;
+      padding: 0 16px;
+      line-height: 50px;
+    }
+  }
+
+  .main-nav {
+    display: none;
+  }
+}

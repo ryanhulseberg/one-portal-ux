@@ -1,0 +1,57 @@
+$base-body-bg: $white;
+$base-text-color: $base;
+$base-line-height: 1.4;
+
+// Used in all typography size calculations
+$paragraph-font-size: 1em;
+
+// Optional default font family stuff
+$body-font-family: Open Sans, sans-serif;
+$body-font-weight: 400;
+$body-font-weight-bold: 700;
+$body-font-style: normal;
+
+$heading-font-family: Open Sans, sans-serif;
+$heading-font-weight: 400;
+
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.5em 0;
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  color: $base;
+}
+
+p, img {
+  margin-bottom: 30px;
+}
+
+body {
+  font-size: 1.3em; // currently ems cause chrome bug misinterpreting rems on body element
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: $body-font-family;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+p, label {
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+  font-size: 14px;
+  color: $base;
+}

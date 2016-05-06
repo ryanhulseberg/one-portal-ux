@@ -1,0 +1,80 @@
+// Notification Hero
+@media (min-width: $mobile) {
+  .notification-container {
+    background: $gray-2;
+    width: 100%;
+    overflow: hidden;
+
+    &__carousel {
+      padding: 96px 0 20px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .notification-container {
+    background: $gray-2;
+    width: 100%;
+    overflow: hidden;
+
+    &__carousel {
+      padding: 67px 0 5px;
+    }
+  }
+}
+
+.card {
+  // position: relative;
+  background: $white;
+  margin: 0 10px 3px;
+  box-shadow: 0px 1px 3px 0px rgba(81,84,102,0.18);
+  border-radius: 3px;
+  overflow: hidden;
+
+  &__title {
+    padding: 5px 30px 0;
+  }
+
+  &__body {
+    padding: 10px 30px 30px;
+    display: flex;
+    align-items: center;
+
+    &--icon {
+      float: left;
+      width: 30%;
+      height: 70px;
+      background-color: $gray;
+    }
+
+    &--text {
+      float: left;
+      width: 70%;
+      padding-left: 16px;
+    }
+  }
+
+  &__action-bar {
+    // position: absolute;
+    background: $gray-3;
+    border-top: 1px solid $gray-2;
+    bottom: 0;
+    width: 100%;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  &__button {
+    padding: 16px 12px 20px 30px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-family: $body-font-family;
+    color: $blue;
+
+    &:after {
+      content: "\20\2192";
+      padding-left: .25rem;
+    }
+  }
+}
