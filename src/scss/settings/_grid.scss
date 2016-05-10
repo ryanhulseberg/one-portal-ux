@@ -3,9 +3,9 @@
 /* Changing Susy default global settings */
 $susy: (
   columns: 12,
-  gutters: 20px / 96.666666667px,
-  output: float,
-  gutter-position: split,
+  gutter-position: inside-static,
+  gutters: 20px/80px,
+  column-width: 80px,
 );
 
 /* Makes border-box properties */
@@ -25,11 +25,38 @@ main {
   padding-top: 1rem;
 }
 
+.column-first {
+  @include span(6 nest);
+
+  &__inner {
+
+    &--first, &--second {
+      @include span(6 of 12);
+    }
+
+    &--third {
+      @include span(12);
+    }
+  }
+}
+
+.column-second {
+  @include span(6);
+}
+
 .dynamic-content__bursar--nested {
   @include span(6 of 12);
 
-  .dynamic-content__bursar--balance {
+  .dynamic-content__bursar--nested-2 {
     @include span(12 of 12);
+
+    .dynamic-content__bursar--payment {
+      @include span(6 of 12);
+    }
+
+    .dynamic-content__bursar--balance {
+      @include span(6 of 12);
+    }
   }
 
   .dynamic-content__bursar--holds {

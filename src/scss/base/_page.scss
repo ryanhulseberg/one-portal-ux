@@ -39,25 +39,74 @@ body {
       }
     }
 
-    &--balance {
-      background: $blue;
-      height: 250px;
-      box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10);
-      border-radius: 2px;
-    }
-
-    &--holds {
-      background: $white;
-      height: 250px;
-      box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10);
-      border-radius: 2px;
-    }
-
     &--transactions {
       background: $white;
-      height: 520px;
+      height: 500px;
       box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10);
       border-radius: 2px;
+    }
+  }
+
+  .column-first {
+
+    &__inner {
+
+      &--first {
+
+        &--content {
+          background: $blue;
+          box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10);
+          border-radius: 2px;
+          height: 230px;
+        }
+      }
+
+      &--second {
+
+        &--content {
+          background: $white;
+          box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10);
+          border-radius: 2px;
+          height: 230px;
+        }
+      }
+
+      &--third {
+        padding-top: 20px;
+
+        &--content {
+          background: $white;
+          box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10);
+          border-radius: 2px;
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  .column-second {
+
+    &__inner {
+      background: $white;
+      height: 500px;
+      box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10);
+      border-radius: 2px;
+    }
+  }
+
+  .column-inner {
+
+    &__header {
+      padding: 18px 20px;
+
+      &--text {
+        font-size: 14px;
+        letter-spacing: .8px;
+        margin: 0;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $blue;
+      }
     }
   }
 }
